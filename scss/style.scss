@@ -1,0 +1,13 @@
+// Variables
+@import 'variables/breakpoints';
+@import 'variables/colors';
+@import 'variables/typography';
+
+// Resets
+@import 'generic/reset';
+@import 'generic/shared';
+
+// Components
+
+// Pages
+@import 'pages/home.scss';
