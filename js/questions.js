@@ -1,67 +1,111 @@
-// q1 = question 1
-// q1a1 = question 1 answer 1
-// q1ca = question 1 correct answer
-// q1wa = question 1 wrong answer
+let rightAnswers = 0;
+let wrongAnswers = 0;
 
-const q1 = document.querySelector('.q1');
-const q1a1 = document.querySelector('.q1a1');
-const q1a2 = document.querySelector('.q1a2');
-const q1a3 = document.querySelector('.q1a3');
-const q1a4 = document.querySelector('.q1a4');
-const q1a5 = document.querySelector('.q1a5');
-const q1ca = document.querySelector('.q1ca');
-const q1wa = document.querySelector('.q1wa');
+document.querySelector('.questionsPage__results--rights').innerHTML = rightAnswers;
+document.querySelector('.questionsPage__results--wrongs').innerHTML = wrongAnswers;
 
-const q2 = document.querySelector('.q2');
-const q2a1 = document.querySelector('.q2a1');
-const q2a2 = document.querySelector('.q2a2');
-const q2a3 = document.querySelector('.q2a3');
-const q2a4 = document.querySelector('.q2a4');
-const q2a5 = document.querySelector('.q2a5');
-const q2ca = document.querySelector('.q2ca');
-const q2wa = document.querySelector('.q2wa');
+let questions = [
+    {
+        number: 1,
+        name: "Question 1",
+        question: "What's 34 + 44?",
+        answers: [23, 53, 54, 43, 78],
+        correctAnswer: 78,
+        selected: true
+    },
+    {
+        number: 2,
+        name: "Question 2",
+        question: "What's 2 + 2?",
+        answers: [4, 5, 6, 7, 8],
+        correctAnswer: 8,
+        selected: false
+    }
+];
 
-const q3 = document.querySelector('.q3');
-const q3a1 = document.querySelector('.q3a1');
-const q3a2 = document.querySelector('.q3a2');
-const q3a3 = document.querySelector('.q3a3');
-const q3a4 = document.querySelector('.q3a4');
-const q3a5 = document.querySelector('.q3a5');
-const q3ca = document.querySelector('.q3ca');
-const q3wa = document.querySelector('.q3wa');
+questions.forEach(question => {
+    // Create each question dynamically
+    let question_div = document.createElement('div');
+    question_div.classList.add('questions__question');
+    question.selected && question_div.classList.add('selectedQ');
 
-const checkMark = document.querySelector('.questions__question--rightA');
-const timesMark = document.querySelector('.questions__question--wrongA');
+    let question_header_div = document.createElement('div');
+    question_header_div.classList.add('questions__question--header');
+    
+    let question_number_p = document.createElement('p');
+    question_number_p.classList.add('questions__question--number');
+    question_number_p.innerText = question.name;
 
-let currentQ = q1;
+    let question_rightA_p = document.createElement('p');
+    question_rightA_p.classList.add('questions__question--rightA');
+
+    let check_mark_i = document.createElement('i');
+    check_mark_i.classList.add('fas');
+    check_mark_i.classList.add('fa-check');
+
+    let question_wrongA_p = document.createElement('p');
+    question_wrongA_p.classList.add('questions__question--wrongA');
+
+    let times_mark_i = document.createElement('i');
+    times_mark_i.classList.add('fas');
+    times_mark_i.classList.add('fa-times');
+
+    let question_question_p = document.createElement('p');
+    question_question_p.classList.add('questions__question--question');
+    question_question_p.innerText = question.question;
+
+    let question_answers_div = document.createElement('div');
+    question_answers_div.classList.add('questions__question--answers');
+
+    let answer1_btn = document.createElement('button');
+    answer1_btn.classList.add(`q${question.number}a1`);
+    answer1_btn.innerText = question.answers[0];
+
+    let answer2_btn = document.createElement('button');
+    answer2_btn.classList.add(`q${question.number}a2`);
+    answer2_btn.innerText = questions[0].answers[1];
+
+    let answer3_btn = document.createElement('button');
+    answer3_btn.classList.add(`q${question.number}a3`);
+    answer3_btn.innerText = question.answers[2];
+
+    let answer4_btn = document.createElement('button');
+    answer4_btn.classList.add(`q${question.number}a4`);
+    answer4_btn.innerText = question.answers[3];
+
+    let answer5_btn = document.createElement('button');
+    answer5_btn.classList.add(`q${question.number}a5`);
+    answer5_btn.innerText = question.answers[4];
+
+    const questionsWrapper = document.querySelector('.questions');
+    questionsWrapper.appendChild(question_div);
+    question_div.appendChild(question_header_div);
+    question_header_div.appendChild(question_number_p);
+    question_header_div.appendChild(question_rightA_p);
+    question_rightA_p.appendChild(check_mark_i);
+    question_header_div.appendChild(question_wrongA_p);
+    question_wrongA_p.appendChild(times_mark_i);
+    question_div.appendChild(question_question_p);
+    question_div.appendChild(question_answers_div);
+    question_answers_div.appendChild(answer1_btn);
+    question_answers_div.appendChild(answer2_btn);
+    question_answers_div.appendChild(answer3_btn);
+    question_answers_div.appendChild(answer4_btn);
+    question_answers_div.appendChild(answer5_btn);
+
+    // The logic behind answers
+    if(question.selected) {
+        answer1_btn.addEventListener('click', () => {
+            if (answer1_btn.innerText == question.correctAnswer) {
+                rightAnswers++;
+                document.querySelector('.questionsPage__results--rights').innerHTML = rightAnswers;
+            } else {
+                wrongAnswers++;
+                document.querySelector('.questionsPage__results--wrongs').innerHTML = wrongAnswers;
+            }
+        });
+    }
+});
 
 
-if (currentQ == q1) {
-    q1a1.addEventListener('click', () => { wrongAnswer(q1ca, q1wa, q2) });
-    q1a2.addEventListener('click', () => { wrongAnswer(q1ca, q1wa, q2) });
-    q1a3.addEventListener('click', () => { wrongAnswer(q1ca, q1wa, q2) });
-    q1a4.addEventListener('click', () => { wrongAnswer(q1ca, q1wa, q2) });
-    q1a5.addEventListener('click', () => { rightAnswer(q1ca, q1wa, q2) });
-} else if (currentQ == q2) {
-    q2a1.addEventListener('click', () => { console.log('correct') });
-}
 
-
-
-function rightAnswer(qca, qwa, nextQ) {
-    qca.classList.add('fadeAndSlide');
-    qwa.style.display = 'none';
-    currentQ.classList.remove('selectedQ');
-    currentQ = nextQ;
-    currentQ.classList.add('selectedQ');
-    checkAnswers();
-}
-
-function wrongAnswer(qca, qwa, nextQ) {
-    qwa.classList.add('fadeAndSlide');
-    qca.style.display = 'none';
-    currentQ.classList.remove('selectedQ');
-    currentQ = nextQ;
-    currentQ.classList.add('selectedQ');
-    checkAnswers();
-}
