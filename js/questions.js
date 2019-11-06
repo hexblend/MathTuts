@@ -25,7 +25,11 @@ let questions = [
 
 function addQuestions() {
     return questions.forEach((question, index) => {
-        // Create each question dynamically
+        // Create all questions dynamically
+
+        // Todo:
+        // Add symbol when given a good or bad answer;
+        
         let question_div = document.createElement('div');
         question_div.classList.add('questions__question');
         question.selected && question_div.classList.add('selectedQ');
@@ -94,18 +98,17 @@ function addQuestions() {
         question_answers_div.appendChild(answer4_btn);
         question_answers_div.appendChild(answer5_btn);
 
-        function updateQuestions(){
+        // Helper functions
+        function updateQuestions() {
             questionsWrapper.innerHTML = "";
             addQuestions();
         }
-
         function nextQuestion() {
             question.selected = false;
             if (index < questions.length - 1) {
                 questions[index + 1].selected = true;
             }
         }
-
         function updateCounter(typeOfAnswer) {
             if (typeOfAnswer == 'rightAnswers') {
                 rightAnswers++;
@@ -117,6 +120,7 @@ function addQuestions() {
             }
         }
 
+        // The logic behind answers
         function checkAnswer(button) {
             if (button.innerText == question.correctAnswer) {
                 updateCounter('rightAnswers');
@@ -129,7 +133,6 @@ function addQuestions() {
             }
         }
 
-        // The logic behind answers
         if (question.selected) {
             answer1_btn.addEventListener('click', () => { checkAnswer(answer1_btn) });
             answer2_btn.addEventListener('click', () => { checkAnswer(answer2_btn) });

@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 180px;
+    animation: $fadeAndSlide 0.45s;
     p {
         font-family: $f-roboto;
         color: $c-darkest-grey;
@@ -31,6 +32,7 @@
     background: #f9f9f9;
     padding: 30px 50px;
     font-family: $f-roboto;
+    animation: $bgFade 0.3s;
     &.selectedQ {
         background: #fefefe;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
