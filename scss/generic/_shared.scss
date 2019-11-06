@@ -7,7 +7,7 @@ body {
     border-radius: 20px;
     height: calc(100vh - 80px);
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow-y: scroll;
 }
 .fadeOut {
     animation: $fadeOut 0.5s;
