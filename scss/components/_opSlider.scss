@@ -1,0 +1,71 @@
+.opSlider {
+    width: 100%;
+}
+.opSlider__description {
+    font-size: $p-regular;
+    font-family: $f-roboto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.opSlider__slide {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+.opSlider__slide--link {
+    display: inline-block;
+    margin: 0 auto;
+    text-decoration: none;
+    &:hover .opSlider__slide--symbol {
+        background: #e2e2e2;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    }
+}
+.opSlider__slide--symbol {
+    background: $c-dark-grey;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 48px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    transition: 0.2s all ease-in-out;
+}
+.opSlider__slide--symbol i {
+    color: $c-orange;
+    font-size: 60px;
+}
+.opSlider__slide--symbolName {
+    font-family: $f-roboto;
+    font-size: $p-small;
+    text-align: center;
+    color: $c-almost-black;
+}
+.opSlider__slide--nextSlide {
+    position: absolute;
+    right: 35%;
+    top: 35%;
+    font-size: $txt-large;
+    color: $c-darkest-grey;
+    transition: 0.25s color ease-in-out;
+    width: 40px;
+    height: 40px;
+    &:hover {
+        color: $c-almost-black;
+        cursor: pointer;
+    }
+}
+.opSlider__slide--previousSlide {
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    font-size: $txt-large;
+    color: $c-darkest-grey;
+    transition: 0.25s color ease-in-out;
+    width: 40px;
+    height: 40px;
+    &:hover {
+        color: $c-almost-black;
+        cursor: pointer;
+    }
+}

@@ -4,37 +4,28 @@
 
 $c-black: #000000;
 $c-white: #ffffff;
-$c-light-grey: #e7e7e7;
-$c-mid-grey: #a5a5a5;
-$c-dark-grey: #474747;
-$c-darkest-grey: #333333;
+$c-light-grey: #e5e5e5;
+$c-mid-grey: #f6f6f6;
+$c-dark-grey: #ededed;
+$c-darker-grey: #a9a9a9;
+$c-darkest-grey: #747474;
+$c-almost-black: #2d2d2d;
 
 $c-light-blue: #2a8fbb;
 $c-blue: #0672a4;
 $c-dark-blue: #096e9d;
 $c-darkest-blue: #05608b;
 
-$c-teal: #04a4a2;
-$c-dark-teal: #06b39c;
-$c-darkest-teal: #075d52;
-$c-mid-teal: #028473;
-
+$c-green: #0ecd21;
+$c-orange: #ed9227;
+$c-red: #e40f0f;
 
 /*
  * Typography
  */
-$c-text-primary: $c-black;
+$c-text-primary: $c-almost-black;
 $c-text-secondary: $c-black;
-$c-heading: $c-black;
-$c-paragraph: $c-darkest-grey;
+$c-heading: $c-orange;
+$c-paragraph: $c-almost-black;
 $c-label: $c-white;
 $c-link: $c-blue;
-
-/*
-* Gradients
- */
-$c-main-gradient: linear-gradient(90deg, $c-teal 0%, $c-blue 100%);
-$c-main-gradient-reversed: linear-gradient(90deg, $c-blue 0%, $c-teal 100%);
-$c-darkest-gradient: linear-gradient(90deg, $c-darkest-teal 0%, $c-darkest-blue 100%);
-$c-mid-gradient-reversed: linear-gradient(56deg, $c-darkest-blue 0%, $c-mid-teal 100%);
-$c-dark-gradient-reversed-upper: linear-gradient(45deg, $c-dark-blue 50%, $c-dark-teal 100%);

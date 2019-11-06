@@ -2,11 +2,14 @@
  * Font Family
  */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Viga&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
 
-$f-raleway: "Raleway", sans-serif;
+$f-viga: 'Viga', sans-serif;
+$f-roboto: 'Roboto', sans-serif;
 
-$f-primary: $f-raleway;
+$f-primary: $f-roboto;
+$f-secondary: $f-viga;
 
 /*
  * Font Weights
@@ -20,9 +23,9 @@ $fw-extraLight: 200;
 /*
 * Letter spacing
 */
-$ls-closeLetters: rem(-1px);
-$ls-bigDistance: rem(5px);
-$ls-smallDistance: rem(1px);
+$ls-closeLetters: -1px;
+$ls-bigDistance: 5px;
+$ls-smallDistance: 1px;
 
 /*
  * Font Sizes
@@ -32,53 +35,53 @@ $rem-baseline: 16px;
 
 /* Desktop */
 
-$txt-large: rem(28px);
-$txt-medium: rem(20px);
-$txt-regular: rem(16px);
-$txt-small: rem(14px);
-$txt-xsmall: rem(11px);
+$txt-large: 28px;
+$txt-medium: 20px;
+$txt-regular: 16px;
+$txt-small: 14px;
+$txt-xsmall: 11px;
 
-$p-regular: rem(18px);
-$p-small: rem(16px);
+$p-regular: 18px;
+$p-small: 16px;
 
-$h-1: rem(40px);
-$h-2: rem(32px);
-$h-3: rem(28px);
-$h-4: rem(24px);
-$h-5: rem(20px);
-$h-6: rem(14px);
+$h-1: 40px;
+$h-2: 32px;
+$h-3: 28px;
+$h-4: 24px;
+$h-5: 20px;
+$h-6: 14px;
 
 /* Responsive */
 
 /* Tablet */
 
-$txt-large-tablet: rem(20px);
-$txt-medium-tablet: rem(18px);
-$txt-regular-tablet: rem(16px);
-$txt-small-tablet: rem(14px);
+$txt-large-tablet: 20px;
+$txt-medium-tablet: 18px;
+$txt-regular-tablet: 16px;
+$txt-small-tablet: 14px;
 
-$p-regular-tablet: rem(16px);
-$p-small-tablet: rem(14px);
+$p-regular-tablet: 16px;
+$p-small-tablet: 14px;
 
-$h-1-tablet: rem(40px);
-$h-2-tablet: rem(28px);
-$h-3-tablet: rem(24px);
-$h-4-tablet: rem(20px);
-$h-5-tablet: rem(16px);
-$h-6-tablet: rem(14px);
+$h-1-tablet: 40px;
+$h-2-tablet: 28px;
+$h-3-tablet: 24px;
+$h-4-tablet: 20px;
+$h-5-tablet: 16px;
+$h-6-tablet: 14px;
 
 /* Mobile */
-$txt-large-mobile: rem(18px);
-$txt-medium-mobile: rem(16px);
-$txt-regular-mobile: rem(14px);
-$txt-small-mobile: rem(12px);
+$txt-large-mobile: 18px;
+$txt-medium-mobile: 16px;
+$txt-regular-mobile: 14px;
+$txt-small-mobile: 12px;
 
-$p-regular-mobile: rem(16px);
-$p-small-mobile: rem(14px);
+$p-regular-mobile: 16px;
+$p-small-mobile: 14px;
 
-$h-1-mobile: rem(36px);
-$h-2-mobile: rem(24px);
-$h-3-mobile: rem(20px);
-$h-4-mobile: rem(16px);
-$h-5-mobile: rem(14px);
-$h-6-mobile: rem(12px);
+$h-1-mobile: 36px;
+$h-2-mobile: 24px;
+$h-3-mobile: 20px;
+$h-4-mobile: 16px;
+$h-5-mobile: 14px;
+$h-6-mobile: 12px;

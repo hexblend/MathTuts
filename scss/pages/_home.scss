@@ -1,0 +1,16 @@
+.homePage {
+    padding: 150px 0;
+}
+.homePage__title {
+    text-align: center;
+    font-size: $h-1;
+    color: $c-orange;
+    font-family: $f-viga;
+}
+.homePage__description {
+    text-align: center;
+    font-size: $p-regular;
+    font-family: $f-roboto;
+    color: $c-almost-black;
+    margin-bottom: 170px;
+}

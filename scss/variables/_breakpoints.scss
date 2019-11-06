@@ -2,23 +2,23 @@
  * Responsive Breakpoints
  */
 
-// $bp-extra-small: rem(320px);
-// $bp-small: rem(475px);
-$bp-extra-small: rem(350px);
-$bp-small: rem(450px);
-$bp-medium: rem(600px);
-$bp-large: rem(992px);
-$bp-large-2: rem(1135px);
-$bp-extra-large: rem(1200px);
-$bp-wide: rem(1720px);
+// $bp-extra-small: 320px;
+// $bp-small: 475px;
+$bp-extra-small: 350px;
+$bp-small: 450px;
+$bp-medium: 600px;
+$bp-large: 992px;
+$bp-large-2: 1135px;
+$bp-extra-large: 1200px;
+$bp-wide: 1720px;
 
 $bp-mobile: $bp-small;
-$bp-tablet: rem(768px);
-$bp-tablet-large: rem(1024px);
-$bp-desktop: rem(1440px);
+$bp-tablet: 768px;
+$bp-tablet-large: 1024px;
+$bp-desktop: 1440px;
 
 /*
  * Content Widths
  */
 
-$grid: rem(1176px);
+$grid: 1176px;
