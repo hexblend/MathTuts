@@ -1,12 +1,14 @@
 // Buttons
 const nextSlideBtn = document.querySelector('.opSlider__slide--nextSlide');
 const prevSlideBtn = document.querySelector('.opSlider__slide--previousSlide');
+
 // Slides
 const addition = document.getElementById('opSlider__aditionLink');
 const substraction = document.getElementById('opSlider__substractionLink');
 const multiplication = document.getElementById('opSlider__multiplicationLink');
 const division = document.getElementById('opSlider__divisionLink');
 
+// Next Slide
 nextSlideBtn.addEventListener('click', () => {
     if (addition.classList.contains('selected')) {
         addition.classList.remove('selected');
@@ -23,6 +25,7 @@ nextSlideBtn.addEventListener('click', () => {
     }
 });
 
+// Prev Slide
 prevSlideBtn.addEventListener('click', () => {
     if (addition.classList.contains('selected')) {
         addition.classList.remove('selected');
@@ -38,3 +41,9 @@ prevSlideBtn.addEventListener('click', () => {
         multiplication.classList.add('selected');
     }
 });
+
+// Fade out page content when redirect
+addition.addEventListener('click', () => { document.querySelector('.homePage').classList.add('fadeOut') });
+substraction.addEventListener('click', () => { document.querySelector('.homePage').classList.add('fadeOut') });
+multiplication.addEventListener('click', () => { document.querySelector('.homePage').classList.add('fadeOut') });
+division.addEventListener('click', () => { document.querySelector('.homePage').classList.add('fadeOut') });

@@ -5,6 +5,16 @@
 }
 $fadeIn: fadeIn ease-in-out;
 
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+$fadeOut: fadeOut ease-in-out;
+
 @keyframes fadeAndSlide {
     0% {
         transform: translateX(-50px);
