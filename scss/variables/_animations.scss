@@ -22,3 +22,11 @@ $fadeOut: fadeOut ease-in-out;
     }
 }
 $fadeAndSlide: fadeAndSlide ease-in-out;
+
+@keyframes fadeAndSlideRight {
+    0% {
+        transform: translateX(+50px);
+        opacity: 0;
+    }
+}
+$fadeAndSlideRight: fadeAndSlideRight ease-in-out;

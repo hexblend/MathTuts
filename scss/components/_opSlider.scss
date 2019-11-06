@@ -1,5 +1,6 @@
 .opSlider {
     width: 100%;
+    animation: $fadeAndSlideRight 0.5s;
 }
 .opSlider__description {
     font-size: $p-regular;
