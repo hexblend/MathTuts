@@ -9,13 +9,12 @@
 }
 .opSlider__slide {
     display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 .opSlider__slide--link {
     display: none;
-    margin: 0 auto;
+    margin: 0 150px;
     text-decoration: none;
     &:hover .opSlider__slide--symbol {
         background: #e2e2e2;
@@ -50,9 +49,7 @@
     color: $c-almost-black;
 }
 .opSlider__slide--nextSlide {
-    position: absolute;
-    right: 35%;
-    top: 35%;
+    margin-bottom: 40px;
     font-size: $txt-large;
     color: $c-darkest-grey;
     transition: 0.2s color ease-in-out;
@@ -64,9 +61,7 @@
     }
 }
 .opSlider__slide--previousSlide {
-    position: absolute;
-    left: 35%;
-    top: 35%;
+    margin-bottom: 40px;
     font-size: $txt-large;
     color: $c-darkest-grey;
     transition: 0.2s color ease-in-out;
