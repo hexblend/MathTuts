@@ -29,7 +29,7 @@ function addQuestions() {
 
         // Todo:
         // Add symbol when given a good or bad answer;
-        
+
         let question_div = document.createElement('div');
         question_div.classList.add('questions__question');
         question.selected && question_div.classList.add('selectedQ');
@@ -63,24 +63,39 @@ function addQuestions() {
         question_answers_div.classList.add('questions__question--answers');
 
         let answer1_btn = document.createElement('button');
-        answer1_btn.classList.add(`q${question.number}a1`);
         answer1_btn.innerText = question.answers[0];
+        if (!question.selected) {
+            answer1_btn.disabled = true;
+            answer1_btn.style.cursor = "inherit";
+        }
 
         let answer2_btn = document.createElement('button');
-        answer2_btn.classList.add(`q${question.number}a2`);
         answer2_btn.innerText = questions[0].answers[1];
+        if (!question.selected) {
+            answer2_btn.disabled = true;
+            answer2_btn.style.cursor = "inherit";
+        }
 
         let answer3_btn = document.createElement('button');
-        answer3_btn.classList.add(`q${question.number}a3`);
         answer3_btn.innerText = question.answers[2];
+        if (!question.selected) {
+            answer3_btn.disabled = true;
+            answer3_btn.style.cursor = "inherit";
+        }
 
         let answer4_btn = document.createElement('button');
-        answer4_btn.classList.add(`q${question.number}a4`);
         answer4_btn.innerText = question.answers[3];
+        if (!question.selected) {
+            answer4_btn.disabled = true;
+            answer4_btn.style.cursor = "inherit";
+        }
 
         let answer5_btn = document.createElement('button');
-        answer5_btn.classList.add(`q${question.number}a5`);
         answer5_btn.innerText = question.answers[4];
+        if (!question.selected) {
+            answer5_btn.disabled = true;
+            answer5_btn.style.cursor = "inherit";
+        }
 
         const questionsWrapper = document.querySelector('.questions');
         questionsWrapper.appendChild(question_div);
