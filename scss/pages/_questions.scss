@@ -33,6 +33,31 @@
         }
     }
 }
+.questionsPage__rightAnswerText {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $c-green;
+    font-family: $f-roboto;
+    font-size: $h-2;
+    text-align: center;
+    opacity: 0;
+}
+.questionsPage__wrongAnswerText {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $c-red;
+    font-family: $f-roboto;
+    font-size: $h-2;
+    text-align: center;
+    opacity: 0;
+}
+.answerAnimation {
+    animation: $answerAnimation 0.75s;
+}
 .questions {
     transition: 0.25s ease-in-out;
     z-index: -1;

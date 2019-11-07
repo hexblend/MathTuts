@@ -23,6 +23,21 @@ $fadeOut: fadeOut ease-in-out;
 }
 $fadeAndSlide: fadeAndSlide ease-in-out;
 
+@keyframes answerAnimation {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(+50px);
+        opacity: 0;
+    }
+}
+$answerAnimation: answerAnimation ease-in-out;
+
 @keyframes fadeAndSlideRight {
     0% {
         transform: translateX(+60px);

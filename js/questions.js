@@ -167,16 +167,44 @@ function addQuestions() {
             if (typeOfAnswer == 'wrongAnswers') {
                 wrongAnswers++;
                 document.querySelector('.questionsPage__results--wrongs').innerHTML = wrongAnswers;
+                document.querySelector('.questionsPage__wrongAnswerText').classList.add('answerAnimation');
+            }
+        }
+
+        function showAnimation(typeOfAnswer) {
+            if (typeOfAnswer == 'rightAnswer') {
+                let rightAnswerAnimation = document.querySelector('.questionsPage__rightAnswerText');
+                if (rightAnswerAnimation.classList.contains('answerAnimation')) {
+                    rightAnswerAnimation.classList.remove('answerAnimation');
+                    setInterval(() => {
+                        rightAnswerAnimation.classList.add('answerAnimation');
+                    }, 10);
+                } else {
+                    rightAnswerAnimation.classList.add('answerAnimation');
+                }
+            }
+            if (typeOfAnswer == 'wrongAnswer') {
+                let wrongAnswerAnimation = document.querySelector('.questionsPage__wrongAnswerText');
+                if (wrongAnswerAnimation.classList.contains('answerAnimation')) {
+                    wrongAnswerAnimation.classList.remove('answerAnimation');
+                    setInterval(() => {
+                        wrongAnswerAnimation.classList.add('answerAnimation');
+                    }, 10);
+                } else {
+                    wrongAnswerAnimation.classList.add('answerAnimation');
+                }
             }
         }
 
         // The logic behind answers
         function checkAnswer(button) {
             if (button.innerText == question.correctAnswer) {
+                showAnimation('rightAnswer');
                 updateCounter('rightAnswers');
                 nextQuestion();
                 updateQuestions();
             } else {
+                showAnimation('wrongAnswer');
                 updateCounter('wrongAnswers');
                 nextQuestion();
                 updateQuestions();
