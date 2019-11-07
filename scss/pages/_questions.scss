@@ -36,6 +36,8 @@
 .questions {
     transition: 0.25s ease-in-out;
     z-index: -1;
+    width: 100%;
+    text-align: center;
 }
 .questions__question {
     width: 100%;
@@ -44,6 +46,9 @@
     font-family: $f-roboto;
     animation: $bgFade 0.3s;
     margin-bottom: 30px;
+    &:last-of-type {
+        margin-bottom: 100px;
+    }
     &.selectedQ {
         background: $c-white;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
@@ -86,6 +91,10 @@
     color: $c-darkest-grey;
     font-size: $p-regular;
     margin-bottom: 30px;
+    text-align: left;
+}
+.questions__question--answers {
+    text-align: left;
 }
 .questions__question--answers button {
     padding: 10px 50px;
@@ -97,5 +106,28 @@
     transition: 0.2s box-shadow ease-in-out;
     &:hover:enabled {
         box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.14);
+    }
+}
+.questionsPage__ghostBtn {
+    font-family: $f-roboto;
+    text-decoration: none;
+    color: $c-almost-black;
+    border: 1px solid $c-almost-black;
+    border-radius: 12px;
+    padding: 10px 40px;
+    font-size: $p-regular;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    transition: 0.15s all ease-in-out;
+    &:hover {
+        background: $c-almost-black;
+        color: $c-orange;
+    }
+    &.inactiveLink {
+        pointer-events: none;
+        cursor: default;
+        color: $c-darker-grey;
+        border-color: $c-darker-grey;
     }
 }

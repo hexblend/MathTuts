@@ -41,6 +41,15 @@ let questions = [
     }
 ];
 
+const questionsWrapper = document.querySelector('.questions');
+
+// Ghost Ending Button
+let ghost_btn = document.createElement('a');
+ghost_btn.classList.add('questionsPage__ghostBtn');
+ghost_btn.classList.add('inactiveLink');
+ghost_btn.href = "./congratulations.html";
+ghost_btn.innerText = "Finish the test";
+
 function addQuestions() {
     return questions.forEach((question, index) => {
         // Create all questions dynamically
@@ -115,7 +124,6 @@ function addQuestions() {
             answer5_btn.style.cursor = "inherit";
         }
 
-        const questionsWrapper = document.querySelector('.questions');
         questionsWrapper.appendChild(question_div);
         question_div.appendChild(question_header_div);
         question_header_div.appendChild(question_number_p);
@@ -130,6 +138,12 @@ function addQuestions() {
         question_answers_div.appendChild(answer3_btn);
         question_answers_div.appendChild(answer4_btn);
         question_answers_div.appendChild(answer5_btn);
+        questionsWrapper.appendChild(ghost_btn);
+
+        // Make ending button clickable
+        if (rightAnswers + wrongAnswers == questions.length) {
+            ghost_btn.classList.remove('inactiveLink');
+        }
 
         // Helper functions
         function updateQuestions() {
@@ -178,6 +192,7 @@ function addQuestions() {
     });
 }
 addQuestions();
+
 
 
 
