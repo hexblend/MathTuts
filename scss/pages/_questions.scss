@@ -88,29 +88,15 @@
         }
     }
 }
-.questions__question--header {
-    display: flex;
-    justify-content: space-between;
-}
 .fadeAndSlide {
     opacity: 1 !important;
     animation: $fadeAndSlide 0.3s;
-}
-.questions__question--rightA {
-    color: $c-green;
-    font-size: 22px;
-    opacity: 0;
-}
-.questions__question--wrongA {
-    color: $c-red;
-    font-size: 22px;
-    opacity: 0;
-    display: none;
 }
 .questions__question--number {
     color: $c-darkest-grey;
     font-size: $p-small;
     margin-bottom: 30px;
+    text-align: left;
 }
 .questions__question--question {
     color: $c-darkest-grey;

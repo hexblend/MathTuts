@@ -53,35 +53,13 @@ ghost_btn.innerText = "Finish the test";
 function addQuestions() {
     return questions.forEach((question, index) => {
         // Create all questions dynamically
-
-        // Todo:
-        // Add symbol when given a good or bad answer;
-        // Animation when going on another page
-
         let question_div = document.createElement('div');
         question_div.classList.add('questions__question');
         question.selected && question_div.classList.add('selectedQ');
 
-        let question_header_div = document.createElement('div');
-        question_header_div.classList.add('questions__question--header');
-
         let question_number_p = document.createElement('p');
         question_number_p.classList.add('questions__question--number');
         question_number_p.innerText = question.name;
-
-        let question_rightA_p = document.createElement('p');
-        question_rightA_p.classList.add('questions__question--rightA');
-
-        let check_mark_i = document.createElement('i');
-        check_mark_i.classList.add('fas');
-        check_mark_i.classList.add('fa-check');
-
-        let question_wrongA_p = document.createElement('p');
-        question_wrongA_p.classList.add('questions__question--wrongA');
-
-        let times_mark_i = document.createElement('i');
-        times_mark_i.classList.add('fas');
-        times_mark_i.classList.add('fa-times');
 
         let question_question_p = document.createElement('p');
         question_question_p.classList.add('questions__question--question');
@@ -126,12 +104,7 @@ function addQuestions() {
         }
 
         questionsWrapper.appendChild(question_div);
-        question_div.appendChild(question_header_div);
-        question_header_div.appendChild(question_number_p);
-        question_header_div.appendChild(question_rightA_p);
-        question_rightA_p.appendChild(check_mark_i);
-        question_header_div.appendChild(question_wrongA_p);
-        question_wrongA_p.appendChild(times_mark_i);
+        question_div.appendChild(question_number_p);
         question_div.appendChild(question_question_p);
         question_div.appendChild(question_answers_div);
         question_answers_div.appendChild(answer1_btn);
@@ -141,7 +114,7 @@ function addQuestions() {
         question_answers_div.appendChild(answer5_btn);
         questionsWrapper.appendChild(ghost_btn);
 
-        // Make ending button clickable
+        // Make ending button clickable when test is finished
         if (rightAnswers + wrongAnswers == questions.length) {
             ghost_btn.classList.remove('inactiveLink');
         }
@@ -199,13 +172,13 @@ function addQuestions() {
         // The logic behind answers
         function checkAnswer(button) {
             if (button.innerText == question.correctAnswer) {
-                showAnimation('rightAnswer');
                 updateCounter('rightAnswers');
+                showAnimation('rightAnswer');
                 nextQuestion();
                 updateQuestions();
             } else {
-                showAnimation('wrongAnswer');
                 updateCounter('wrongAnswers');
+                showAnimation('rightAnswer');
                 nextQuestion();
                 updateQuestions();
             }
