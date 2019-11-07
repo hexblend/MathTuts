@@ -133,7 +133,7 @@ function addQuestions() {
 
         // Helper functions
         function updateQuestions() {
-            scrollUp -= 200;
+            scrollUp -= 230;
             questionsWrapper.style.transform = "translateY(" + scrollUp + "px)";
             questionsWrapper.innerHTML = "";
             addQuestions();
