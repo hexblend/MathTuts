@@ -25,11 +25,18 @@ $fadeAndSlide: fadeAndSlide ease-in-out;
 
 @keyframes fadeAndSlideRight {
     0% {
-        transform: translateX(+50px);
+        transform: translateX(+60px);
         opacity: 0;
     }
 }
 $fadeAndSlideRight: fadeAndSlideRight ease-in-out;
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(+60px);
+    }
+}
+$slideRight: slideRight ease-in-out;
 
 @keyframes bgFade {
     0% {

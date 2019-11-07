@@ -4,7 +4,7 @@
 .questionsPage__header {
     position: relative;
     width: calc(100% - 80px);
-    padding: 120px 0 100px 0;
+    padding: 120px 0 150px 0;
     background: $c-mid-grey;
     z-index: 10;
 }
@@ -43,8 +43,9 @@
     padding: 30px 50px;
     font-family: $f-roboto;
     animation: $bgFade 0.3s;
+    margin-bottom: 30px;
     &.selectedQ {
-        background: #fefefe;
+        background: $c-white;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
         border-top: 1px solid $c-dark-grey;
         border-bottom: 1px solid $c-dark-grey;

@@ -42,12 +42,14 @@
 .opSlider__slide--symbol i {
     color: $c-orange;
     font-size: 60px;
+    animation: $fadeIn 0.2s;
 }
 .opSlider__slide--symbolName {
     font-family: $f-roboto;
     font-size: $p-small;
     text-align: center;
     color: $c-almost-black;
+    animation: $fadeIn 0.5s;
 }
 .opSlider__slide--nextSlide {
     margin-bottom: 40px;
