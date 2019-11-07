@@ -56,6 +56,7 @@ function addQuestions() {
 
         // Todo:
         // Add symbol when given a good or bad answer;
+        // Animation when going on another page
 
         let question_div = document.createElement('div');
         question_div.classList.add('questions__question');
@@ -192,6 +193,9 @@ function addQuestions() {
     });
 }
 addQuestions();
+
+// Fade out page content when redirect
+ghost_btn.addEventListener('click', () => { document.querySelector('.questionsPage').classList.add('fadeOut') });
 
 
 
