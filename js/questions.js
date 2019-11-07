@@ -4,10 +4,12 @@ let wrongAnswers = 0;
 document.querySelector('.questionsPage__results--rights').innerHTML = rightAnswers;
 document.querySelector('.questionsPage__results--wrongs').innerHTML = wrongAnswers;
 
+let scrollUp = 0;
+
 let questions = [
     {
         number: 1,
-        name: "Question 1",
+        name: "Question 1:",
         question: "What's 34 + 44?",
         answers: [23, 53, 54, 43, 78],
         correctAnswer: 78,
@@ -15,7 +17,23 @@ let questions = [
     },
     {
         number: 2,
-        name: "Question 2",
+        name: "Question 2:",
+        question: "What's 2 + 2?",
+        answers: [4, 5, 6, 7, 8],
+        correctAnswer: 4,
+        selected: false
+    },
+    {
+        number: 2,
+        name: "Question 2:",
+        question: "What's 2 + 2?",
+        answers: [4, 5, 6, 7, 8],
+        correctAnswer: 4,
+        selected: false
+    },
+    {
+        number: 2,
+        name: "Question 2:",
         question: "What's 2 + 2?",
         answers: [4, 5, 6, 7, 8],
         correctAnswer: 4,
@@ -115,6 +133,8 @@ function addQuestions() {
 
         // Helper functions
         function updateQuestions() {
+            scrollUp -= 120;
+            questionsWrapper.style.transform = "translateY(" + scrollUp + "px)";
             questionsWrapper.innerHTML = "";
             addQuestions();
         }
