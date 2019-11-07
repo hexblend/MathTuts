@@ -178,7 +178,7 @@ function addQuestions() {
                 updateQuestions();
             } else {
                 updateCounter('wrongAnswers');
-                showAnimation('rightAnswer');
+                showAnimation('wrongAnswer');
                 nextQuestion();
                 updateQuestions();
             }
