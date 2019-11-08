@@ -1,0 +1,52 @@
+.congratsPage {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.congratsPage__title {
+    font-size: $h-1;
+    color: $c-orange;
+    font-family: $f-viga;
+    animation: $fadeAndSlide 0.5s;
+    &:last-of-type {
+        margin-bottom: 30px;
+    }
+}
+.congratsPage__results {
+    display: flex;
+    justify-content: center;
+    animation: $fadeAndSlide 0.45s;
+    margin-bottom: 100px;
+    p {
+        font-family: $f-roboto;
+        color: $c-darkest-grey;
+        font-size: $p-regular;
+        &:first-child {
+            margin-right: 10px;
+        }
+        em {
+            font-family: $f-roboto;
+            color: $c-almost-black;
+            font-style: normal;
+        }
+    }
+}
+.congratsPage__ghostBtn {
+    font-family: $f-roboto;
+    text-decoration: none;
+    color: $c-almost-black;
+    border: 1px solid $c-almost-black;
+    border-radius: 12px;
+    padding: 10px 40px 8px 40px;
+    font-size: $p-small;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    transition: 0.1s all ease-in-out;
+    &:hover {
+        background: $c-almost-black;
+        color: $c-orange;
+    }
+}

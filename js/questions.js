@@ -6,6 +6,7 @@ document.querySelector('.questionsPage__results--wrongs').innerHTML = wrongAnswe
 
 let scrollUp = 0;
 
+//  Questions Array
 let questions = [
     {
         number: 1,
@@ -38,12 +39,13 @@ let questions = [
         answers: [4, 5, 6, 7, 8],
         correctAnswer: 4,
         selected: false
-    }
+    },
+
 ];
 
 const questionsWrapper = document.querySelector('.questions');
 
-// Ghost Ending Button
+// Ghost "Finish the test" Button
 let ghost_btn = document.createElement('a');
 ghost_btn.classList.add('questionsPage__ghostBtn');
 ghost_btn.classList.add('inactiveLink');
@@ -51,11 +53,13 @@ ghost_btn.href = "./congratulations.html";
 ghost_btn.innerText = "Finish the test";
 
 function addQuestions() {
+    // Create all questions dynamically
     return questions.forEach((question, index) => {
-        // Create all questions dynamically
         let question_div = document.createElement('div');
         question_div.classList.add('questions__question');
-        question.selected && question_div.classList.add('selectedQ');
+        if (question.selected) {
+            question_div.classList.add('selectedQ');
+        }
 
         let question_number_p = document.createElement('p');
         question_number_p.classList.add('questions__question--number');
@@ -191,12 +195,18 @@ function addQuestions() {
             answer4_btn.addEventListener('click', () => { checkAnswer(answer4_btn) });
             answer5_btn.addEventListener('click', () => { checkAnswer(answer5_btn) });
         }
+
+        // Save Right/Wrong Answers to localStorage
+        localStorage.setItem('rightAnswers', rightAnswers);
+        localStorage.setItem('wrongAnswers', wrongAnswers);
     });
 }
 addQuestions();
 
 // Fade out page content when redirect
 ghost_btn.addEventListener('click', () => { document.querySelector('.questionsPage').classList.add('fadeOut') });
+
+
 
 
 
