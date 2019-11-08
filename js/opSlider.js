@@ -1,3 +1,4 @@
+// Operation Slider 
 // Buttons
 const nextSlideBtn = document.querySelector('.opSlider__slide--nextSlide');
 const prevSlideBtn = document.querySelector('.opSlider__slide--previousSlide');

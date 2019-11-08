@@ -54,7 +54,7 @@ ghost_btn.innerText = "Finish the test";
 
 function addQuestions() {
     // Create all questions dynamically
-    return questions.forEach((question, index) => {
+    questions.forEach((question, index) => {
         let question_div = document.createElement('div');
         question_div.classList.add('questions__question');
         if (question.selected) {
