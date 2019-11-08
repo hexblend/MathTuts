@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>MathTuts</title>
-        <link rel="stylesheet" href="css/style.min.css" />
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="homePage">
-                
-                <h1 class="homePage__title">Welcome to MathTuts</h1>
-                <p class="homePage__description">A place to exercise your math skills</p>
 
-                <div class="opSlider">
-                    <p class="opSlider__description">I want to practice:</p>
-                    <div class="opSlider__slide">
-                        <button class="opSlider__slide--previousSlide"><i class="fas fa-angle-left"></i></button>
-                        <a href="./questions/addition/index.html" class="opSlider__slide--link selected" id="opSlider__aditionLink">
-                            <div class="opSlider__slide--symbol"><i class="fas fa-plus"></i></div>
-                            <p class="opSlider__slide--symbolName">Addition</p>
-                        </a>
-                        <a href="#" class="opSlider__slide--link" id="opSlider__substractionLink">
-                            <div class="opSlider__slide--symbol"><i class="fas fa-minus"></i></div>
-                            <p class="opSlider__slide--symbolName">Substraction</p>
-                        </a>
-                        <a href="#" class="opSlider__slide--link" id="opSlider__multiplicationLink">
-                            <div class="opSlider__slide--symbol"><i class="fas fa-times"></i></div>
-                            <p class="opSlider__slide--symbolName">Multiplication</p>
-                        </a>
-                        <a href="#" class="opSlider__slide--link" id="opSlider__divisionLink">
-                            <div class="opSlider__slide--symbol"><i class="fas fa-divide"></i></div>
-                            <p class="opSlider__slide--symbolName">Division</p>
-                        </a>
-                        <button class="opSlider__slide--nextSlide"><i class="fas fa-angle-right"></i></button>
-                    </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MathTuts</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="homePage">
+
+            <h1 class="homePage__title">Welcome to MathTuts</h1>
+            <p class="homePage__description">A place to exercise your math skills</p>
+
+            <div class="opSlider">
+                <p class="opSlider__description">I want to practice:</p>
+                <div class="opSlider__slide">
+                    <button class="opSlider__slide--previousSlide"><i class="fas fa-angle-left"></i></button>
+                    <a href="./pages/addition/index.html" class="opSlider__slide--link selected"
+                        id="opSlider__aditionLink">
+                        <div class="opSlider__slide--symbol"><i class="fas fa-plus"></i></div>
+                        <p class="opSlider__slide--symbolName">Addition</p>
+                    </a>
+                    <a href="./pages/substraction/index.html" class="opSlider__slide--link"
+                        id="opSlider__substractionLink">
+                        <div class="opSlider__slide--symbol"><i class="fas fa-minus"></i></div>
+                        <p class="opSlider__slide--symbolName">Substraction</p>
+                    </a>
+                    <a href="./pages/multiplication/index.html" class="opSlider__slide--link"
+                        id="opSlider__multiplicationLink">
+                        <div class="opSlider__slide--symbol"><i class="fas fa-times"></i></div>
+                        <p class="opSlider__slide--symbolName">Multiplication</p>
+                    </a>
+                    <a href="./pages/division/index.html" class="opSlider__slide--link" id="opSlider__divisionLink">
+                        <div class="opSlider__slide--symbol"><i class="fas fa-divide"></i></div>
+                        <p class="opSlider__slide--symbolName">Division</p>
+                    </a>
+                    <button class="opSlider__slide--nextSlide"><i class="fas fa-angle-right"></i></button>
                 </div>
-
             </div>
+
         </div>
-        <script src="js/opSlider.js"></script>
-    </body>
+    </div>
+    <script src="js/opSlider.js"></script>
+</body>
+
 </html>

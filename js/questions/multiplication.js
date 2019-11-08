@@ -11,36 +11,43 @@ let questions = [
     {
         number: 1,
         name: "Question 1:",
-        question: "What's 34 + 44?",
-        answers: [23, 53, 54, 43, 78],
-        correctAnswer: 78,
+        question: "6 x 7 = ?",
+        answers: [38, 42, 45, 49, 52],
+        correctAnswer: 42,
         selected: true
     },
     {
         number: 2,
         name: "Question 2:",
-        question: "What's 2 + 2?",
-        answers: [4, 5, 6, 7, 8],
-        correctAnswer: 4,
+        question: "5 x 6 = ?",
+        answers: [30, 35, 40, 45, 50],
+        correctAnswer: 30,
         selected: false
     },
     {
-        number: 2,
-        name: "Question 2:",
-        question: "What's 2 + 2?",
-        answers: [4, 5, 6, 7, 8],
-        correctAnswer: 4,
+        number: 3,
+        name: "Question 3:",
+        question: "4 x 9 = ?",
+        answers: [50, 46, 36, 30, 26],
+        correctAnswer: 36,
         selected: false
     },
     {
-        number: 2,
-        name: "Question 2:",
-        question: "What's 2 + 2?",
-        answers: [4, 5, 6, 7, 8],
-        correctAnswer: 4,
+        number: 4,
+        name: "Question 4:",
+        question: "7 x 7 = ?",
+        answers: [14, 29, 39, 49, 50],
+        correctAnswer: 49,
         selected: false
     },
-
+    {
+        number: 5,
+        name: "Question 5:",
+        question: "5 x 8 = ?",
+        answers: [40, 30, 20, 50, 13],
+        correctAnswer: 40,
+        selected: false
+    }
 ];
 
 const questionsWrapper = document.querySelector('.questions');
