@@ -24,6 +24,9 @@
     &.selected {
         display: block;
     }
+    @media only screen and (max-width: $bp-medium) {
+        margin: 0 75px;
+    }
 }
 
 .opSlider__slide--symbol {
